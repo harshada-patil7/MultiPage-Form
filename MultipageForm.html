@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact form</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="MultiPageForm.css">
+</head>
+
+<body>
+  <div class="container mt-5 mb-5">
+    <div class="progress-bar">
+
+      <div class="step">
+        <p>Basic Details</p>
+        <div class="bullet">
+          <span>1</span>
+        </div>
+        <div class="fas fa-check check"></div>
+      </div>
+
+      <div class="step">
+        <p>Highe School</p>
+        <div class="bullet">
+          <span>2</span>
+        </div>
+        <div class="fas fa-check check"></div>
+      </div>
+
+      <div class="step">
+        <p>Higher Education</p>
+        <div class="bullet">
+          <span>3</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+
+      <div class="step">
+        <p>Submit</p>
+        <div class="bullet">
+          <span>4</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="form-outer">
+        <form class="#" action="" method="post" id="form1">
+          <div class="page slidePage">
+            <div class="title">Personal Information</div>
+            <div class="form-group">
+              <div class="field">
+                <input type="text" class="form-control" placeholder="Full Name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="field">
+                <input type="email" class="form-control" placeholder="Email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="field">
+                <input type="tel" class="form-control" placeholder="Mobile Number" size="10" required>
+              </div>
+            </div>
+            <div class="form-group mt-5">
+              <div class="field">
+                <label for="date_of_birth" class="label">Date of birth</label>
+                <input type="date" class="form-control" id="date_of_birth" placeholder="Date of birth: mm/dd/yyyy">
+              </div>
+            </div>
+            <div class="form-group mt-5 mb-0 p-0">
+              <div class="field">
+                <div class="custom-control custom-radio ml-3 mb-0">
+                  <input type="radio" class="custom-control-input" id="Male" name="radio-stacked" required>
+                  <label class="custom-control-label" for="Male">Male</label>
+                </div>
+                <div class="custom-control custom-radio ml-5 mb-0">
+                  <input type="radio" class="custom-control-input" id="Female" name="radio-stacked" required>
+                  <label class="custom-control-label" for="Female">Female</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="field">
+                <input type="text" class="form-control" placeholder="City">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="field">
+                <input type="text" class="form-control" placeholder="Pincode" required pattern="^[0-9]{6}$" title="Enter Valid Pin Code">
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <div class="field">
+                <textarea class="form-control" placeholder="Address" rows="5" required></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="field nextBtn">
+                <button type="button" name="button" class="form-control mt-3">Next</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="title">Help Us Serve You Better</div>
+
+            <div class="form-row mt-3">
+              <div class="form-group col-4">
+                <div class="field">
+                  <label for="10th"><small><b>10th Passing Year:</b></small></label>
+                  <input type="month" title="10th Passing Year" class="form-control" id="10th" required>
+                </div>
+              </div>
+              <div class="form-group col-4">
+                <div class="field">
+                  <label class="label mb-3 m-t5" for="Gre"><small><b>Select Grade System:</b></small></label>
+                  <select class="form-control" id="Gre">
+                    <option>...</option>
+                    <option>...</option>
+                  </select><br>
+                </div>
+              </div>
+              <div class="form-group col-4">
+                <div class="field">
+                  <input type="number" class="form-control" size="5" placeholder="Marks" id="10thObM">
+                  <input type="number" class="form-control" size="5" placeholder="Marks" id="10thMarks">
+                </div>
+              </div>
+              <script type="text/javascript">
+                function compare() {
+                  var obtainMarks = document.getElementById("10thObM").value;
+                  var marks = document.getElementById("10thMarks").value;
+                  if (obtainMarks > marks) {
+                    alert("Check Your 10th Total Marks.");
+                    return false;
+                  }
+                  return true;
+                }
+              </script>
+            </div>
+
+            <div class="form-row mt-5">
+              <div class="form-group col-4">
+                <div class="field">
+                  <label class="label" for="12th"><small><b>12th Passing Year:</b></small></label>
+                  <input type="month" title="12th Passing Year" class="form-control" id="12th" required>
+                </div>
+              </div>
+              <div class="form-group col-4">
+                <div class="field">
+                  <label class="label mb-3 m-t5" for="Gre"><small><b>Select Grade System:</b></small></label>
+                  <select class="form-control" id="Gre">
+                    <option>...</option>
+                    <option>...</option>
+                  </select><br>
+                </div>
+              </div>
+              <div class="form-group col-4">
+                <div class="field">
+                  <input type="number" class="form-control" size="5" placeholder="Marks" id="12thObM">
+                  <input type="number" class="form-control" size="5" placeholder="Total" id="12thMarks">
+                </div>
+              </div>
+              <script type="text/javascript">
+                function compare() {
+                  var obtainMarks = document.getElementById("12thObM").value;
+                  var marks = document.getElementById("12thMarks").value;
+                  if (obtainMarks > marks) {
+                    alert("Check Your 12th Total Marks.");
+                    return false;
+                  }
+                  return true;
+                }
+              </script>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-4 mt-5">
+                <div class="field">
+                  <label class="label" for="Grad"><small><b>Graduation Passing Year:</b></small></label>
+                  <input type="month" title="12th Passing Year" class="form-control" id="Grad" required>
+                </div>
+              </div>
+              <div class="form-group col-4 mt-5">
+                <div class="field">
+                  <label class="label mb-3 m-t5" for="Gre"><small><b>Select Grade System:</b></small></label>
+                  <select class="form-control" id="Gre">
+                    <option>...</option>
+                    <option>...</option>
+                  </select><br>
+                </div>
+              </div>
+              <div class="form-group col-4 mt-5">
+                <div class="field">
+                  <input type="number" class="form-control" size="5" placeholder="Marks" id="GObM">
+                  <input type="number" class="form-control" size="5" placeholder="Total" id="GMarks">
+                </div>
+              </div>
+              <script type="text/javascript">
+                function compare() {
+                  var obtainMarks = document.getElementById("GObM").value;
+                  var marks = document.getElementById("GMarks").value;
+                  if (obtainMarks > marks) {
+                    alert("Check Your Graduation Total Marks.");
+                    return false;
+                  }
+                  return true;
+                }
+              </script>
+            </div>
+
+            <div class="form-group mb-5">
+              <div class="field">
+                <textarea placeholder="A brief about your educational detail." rows="5" class="form-control"></textarea>
+              </div>
+            </div>
+
+            <div class="field btns">
+              <button type="button" name="button" class="form-control mt-3 prev-1 prev">Previous</button>
+              <button type="button" name="button" class="form-control mt-3 next-1 next" onclick="return compare()">Next</button>
+            </div>
+
+          </div>
+
+          <div class="page">
+            <div class="title">Courses That Interests You</div>
+            <div class="form-group mb-5 mt-5">
+              <div class="field">
+                <label class="label" for="course">Courses:</label>
+                <select class="form-control mt-3" id="course">
+                  <option>Select A Course</option>
+                  <option>...</option>
+                </select>
+              </div>
+            </div>
+            <div class="field btns">
+              <button type="button" name="button" class="form-control mt-5 prev-2 prev">Previous</button>
+              <button type="button" name="button" class=" form-control mt-5 next-2 next">Next</button>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="title mb-3">Professional Experience</div>
+            <div class="form-group mt-3">
+              <div class="field">
+                <label class="label mb-2" for="Cmp">Company:</label>
+                <select class="form-control mb-5" id="Cmp">
+                  <option>Select a company</option>
+                  <option>...</option>
+                </select><br>
+              </div>
+            </div>
+
+            <div class="form-group mt-5">
+              <div class="field">
+                <label class="label mb-3 m-t5" for="Exp">Work Experience Year:</label>
+                <select class="form-control" id="Exp">
+                  <option>Select Experience</option>
+                  <option>...</option>
+                </select><br>
+              </div>
+            </div>
+
+            <div class="form-group mt-3 mb-5">
+              <div class="field">
+                <input type="text" class="form-control mb-3" placeholder="Specialization">
+              </div>
+            </div>
+
+            <div class="field btns">
+              <button type="button" name="button" class="form-control mt-3 prev-3 prev">Previous</button>
+              <button type="button" name="button" class="form-control mt-3 submit">Submit</button>
+            </div>
+
+          </div>
+          <script src="scroll.js">
+          </script>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
